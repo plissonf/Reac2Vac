@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Reac 2 Vac</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!--<link href="../static/css/morris.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Reac 2 Vac</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Patient Profile</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Predicted Adverse Events</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Predicted Adverse Events Section -->
+
+    <section id="services" class="services-section">
+
+        <!-- Corresponding predicted adverse events -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Predicted Adverse Events</h1>
+
+                    <!-- Percentage most frequent adverse events -->
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                          <!--<output type="text" id="events" name='events' value ={{events}} placeholder={{events}}>-->
+                          <div id="chartContainer">
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.js"></script>
+                            <script src="http://dimplejs.org/dist/dimple.v2.2.0.min.js"></script>
+                            <script type="text/javascript">
+
+                              var svg = dimple.newSvg("#chartContainer", 700, 550);
+                              //var values = {{values|tojson}};
+                              //var keys = {{keys|tojson}};
+                              var values = {{values}};
+                              console.log(values)
+                              //var keys = {{keys}};
+                              //console.log(events_values);
+                              //console.log(keys)
+                              //var events_json = JSON.parse(events_results);
+                              var symptoms = ['pain', 'pruritus','swelling','pyrexia','rash','urticaria','hypersensitivity','erythema','vomiting','oedema','headache']
+                              var data2 = [];
+                              for(var i = 0; i < values.length; i++){
+                                data2.push({"Adverse Event": symptoms[i],
+                                            "Likelihood (%)": values[i]});
+                              }
+                              console.log(data2)
+
+                              /*var data = [
+                                    { "Adverse Event":"Pain", "Likelihood (%)": 0 },
+                                    { "Adverse Event":"Erythema", "Likelihood (%)": 0 },
+                                    { "Adverse Event":"Pyrexia", "Likelihood (%)": 35 },
+                                    { "Adverse Event":"Rash", "Likelihood (%)": 18 },
+                                    { "Adverse Event":"Swelling", "Likelihood (%)": 0 },
+                                    { "Adverse Event":"Pruritus", "Likelihood (%)": 7 },
+                                    { "Adverse Event":"Oedema", "Likelihood (%)": 8 },
+                                    { "Adverse Event":"Headache", "Likelihood (%)": 10 },
+                                    { "Adverse Event":"Urticaria", "Likelihood (%)": 0 },
+                                    { "Adverse Event":"Hypersensitivity", "Likelihood (%)": 8 },
+                                    { "Adverse Event":"Vomiting", "Likelihood (%)": 11 }
+                                  ];*/
+
+                                  var chart = new dimple.chart(svg, data2);
+                                  var y = chart.addCategoryAxis("y", "Adverse Event");
+                                  y.addOrderRule("Text");
+                                  //y.fontFamily = "courier";
+                                  y.fontSize = "20px";
+                                  var x = chart.addMeasureAxis("x", "Likelihood (%)");
+                                  //x.fontFamily = "courier";
+                                  x.fontSize = "20px";
+                                  x.overrideMin = 0;
+                                  x.overrideMax = 100;
+                                  //chart.addMeasureAxis("x", "Likelihood (%)");
+                                  chart.setBounds(150, 60, 600, 415)
+                                  chart.addSeries(null, dimple.plot.bar);
+                                  chart.assignColor("Likelihood (%)", "yellow", "orange", 25);
+                                  chart.assignColor("Likelihood (%)", "orange", "red", 50);
+                                  chart.assignColor("Likelihood (%)", "red", "purple", 75);
+                                  chart.draw();
+
+                            </script>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Section</h1>
+                    <br>
+                    <p><strong>Reac 2 Vac</strong> is the project realised by Dr. Fabien Plisson as part of his fellowship in the Insight Health Data Science program, Boston Fall 2016.</p>
+                    <br>
+
+                    <iframe src="https://docs.google.com/presentation/d/14WtEjwgGEBKTJ799Ce2ynTbfKwzHpPj15s9eBzq5ocY/embed?start=false&loop=false&delayms=100000" frameborder="0" width="750" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+                    <br>
+                    <p> For more information about Insight Data Science, visit <a href="url"> http://www.insighthealthdata.com/</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="../static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="../static/js/jquery.easing.min.js"></script>
+    <script src="../static/js/scrolling-nav.js"></script>
+
+    <!-- Morris Charts JavaScript to download-->
+    <script src="../static/js/raphael.min.js"></script>
+    <!--<script src="../static/js/morris.min.js"></script>
+    <script src="../static/js/morris-data.js"></script>-->
+
+
+</body>
+
+</html>
