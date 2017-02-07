@@ -8,15 +8,12 @@ Created an online web application using Flask / Bootstrap applying HTML / CSS / 
 
 # Demo
 
-[[embed url=https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?start=false&loop=false&delayms=60000]]
-
 <section id="slides" class="slides-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-12" align="center">
         <br>
-          <iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?start=false&loop=false&delayms=60000" frameborder="0" width="900" height="535" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
-          </iframe>  
+          <iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
         <br>
       </div>
     </div>
