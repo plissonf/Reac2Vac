@@ -5,3 +5,8 @@ Reac2vac.online - Your Doctor's Guide to Vaccine Adverse Events
 - Analyzed, processed the data using R (dplyr, reshape2) and Python (pandas, scikitlearn).
 Created an online web application using Flask / Bootstrap applying HTML / CSS / JSON programming. The web application is running via Amazon Web Services (EBS-optimised EC2 instance).
 - The project has been created from scratch to web delivery under 3 weeks. 
+
+# Demo
+https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?start=false&loop=false&delayms=60000
+
+Project realized by Dr. Fabien Plisson as part of his fellowship in the Insight Health Data Science program, Boston Fall 2016.
