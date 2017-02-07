@@ -7,7 +7,8 @@ Created an online web application using Flask / Bootstrap applying HTML / CSS / 
 - The project has been created from scratch to web delivery under 3 weeks. 
 
 # Demo
-https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?start=false&loop=false&delayms=60000
+
+[[embed url=https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?start=false&loop=false&delayms=60000]]
 
 <section id="slides" class="slides-section">
   <div class="container">
