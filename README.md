@@ -9,8 +9,7 @@ Created an online web application using Flask / Bootstrap applying HTML / CSS / 
 # Demo
 
 
-<iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen">
-</iframe> 
+[Daring Fireball]: "https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?"
        
 
 Project realized by Dr. Fabien Plisson as part of the Insight Health Data Science fellowship program,
