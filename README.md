@@ -14,9 +14,9 @@ https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVd
     <div class="row">
       <div class="col-lg-12" align="center">
         <br>
-        <iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?start=false&loop=false&delayms=60000" frameborder="0" width="900" height="535" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>  
+          <iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?start=false&loop=false&delayms=60000" frameborder="0" width="900" height="535" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+          </iframe>  
         <br>
-        <p> For more information about Insight Data Science, visit <a href="url"> http://www.insighthealthdata.com/</a>
       </div>
     </div>
   </div>
@@ -24,3 +24,4 @@ https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVd
 
 Project realized by Dr. Fabien Plisson as part of the Insight Health Data Science fellowship program,
 Boston Fall 2016.
+<p> For more information about Insight Data Science, visit <a href="url"> http://www.insighthealthdata.com/</a>
