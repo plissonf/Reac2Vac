@@ -9,9 +9,9 @@ Created an online web application using Flask / Bootstrap applying HTML / CSS / 
 # Demo
 
 
-[Daring Fireball]: "https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?"
+iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?wmode=opaque""
        
 
 Project realized by Dr. Fabien Plisson as part of the Insight Health Data Science fellowship program,
 Boston Fall 2016.
-<p> For more information about Insight Data Science, visit <a href="url"> http://www.insighthealthdata.com/</a>
+For more information about Insight Data Science, visit <a href="url"> http://www.insighthealthdata.com/
