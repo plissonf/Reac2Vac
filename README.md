@@ -8,7 +8,7 @@ Created an online web application using Flask / Bootstrap applying HTML / CSS / 
 
 # Demo
 
-![ScreenShot](url)
+![ScreenShot](https://github.com/plissonf/Reac2Vac/blob/master/demo/Demo_Reac2Vac_FabienPlisson.pptx)
        
 
 Project realized by Dr. Fabien Plisson as part of the Insight Health Data Science fellowship program,
