@@ -8,17 +8,10 @@ Created an online web application using Flask / Bootstrap applying HTML / CSS / 
 
 # Demo
 
-<section id="slides" class="slides-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12" align="center">
-        <br>
-          <iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe> 
-        <br>
-      </div>
-    </div>
-  </div>
-</section>
+
+<iframe src="https://docs.google.com/presentation/d/1SJ3R24h7R1VMaZalEh6FTuXgaVBUgEscvlf6jcVdli8/embed?" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen">
+</iframe> 
+       
 
 Project realized by Dr. Fabien Plisson as part of the Insight Health Data Science fellowship program,
 Boston Fall 2016.
